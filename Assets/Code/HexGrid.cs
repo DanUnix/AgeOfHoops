@@ -12,6 +12,8 @@ public class HexGrid : MonoBehaviour {
 
     public Text cellLabelPrefab;
 
+    public bool debug;
+
     HexMesh hexMesh;
 
     Canvas gridCanvas; 
@@ -45,13 +47,14 @@ public class HexGrid : MonoBehaviour {
         cell.coordinates = HexCoordinates.FromOffsetCoordinates(x, z);
 
 
-
-        Text label = Instantiate<Text>(cellLabelPrefab);
-        label.rectTransform.SetParent(gridCanvas.transform, false);
-        label.rectTransform.anchoredPosition =
-            new Vector2(position.x, position.z);
-        label.text = cell.coordinates.ToStringOnSeparateLines();
-
+        if (debug)
+        {
+            Text label = Instantiate<Text>(cellLabelPrefab);
+            label.rectTransform.SetParent(gridCanvas.transform, false);
+            label.rectTransform.anchoredPosition =
+                new Vector2(position.x, position.z);
+            label.text = cell.coordinates.ToStringOnSeparateLines();
+        }
 
 
 
