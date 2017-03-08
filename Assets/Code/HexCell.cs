@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class HexCell : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public HexCoordinates coordinates;
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
