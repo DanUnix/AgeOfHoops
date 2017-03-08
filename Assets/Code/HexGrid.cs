@@ -59,9 +59,29 @@ public class HexGrid : MonoBehaviour {
     void Start () {
         hexMesh.Triangulate(cells);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            HandleInput();
+        }
+    }
+
+    void HandleInput()
+    {
+        Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(inputRay, out hit))
+        {
+            TouchCell(hit.point);
+        }
+    }
+
+    void TouchCell(Vector3 position)
+    {
+        position = transform.InverseTransformPoint(position);
+        Debug.Log("touched at " + position);
+    }
 }
