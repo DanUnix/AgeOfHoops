@@ -9,6 +9,7 @@ public class HexMesh : MonoBehaviour
     List<Vector3> vertices;
     List<int> triangles;
     MeshCollider meshCollider;
+
     void Awake()
     {
         
@@ -37,6 +38,9 @@ public class HexMesh : MonoBehaviour
         hexMesh.vertices = vertices.ToArray();
         hexMesh.triangles = triangles.ToArray();
         hexMesh.RecalculateNormals();
+
+        meshCollider.sharedMesh = hexMesh;
+
     }
 
     void AddTriangle(Vector3 v1, Vector3 v2, Vector3 v3)
@@ -54,6 +58,8 @@ public class HexMesh : MonoBehaviour
 
     void Triangulate(HexCell cell)
     {
+        if (cell == null)
+            return;
         Vector3 center = cell.transform.localPosition;
         for (int i = 0; i < 6; i++)
         {

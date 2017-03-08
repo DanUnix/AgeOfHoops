@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class HexGrid : MonoBehaviour {
 
-    public int width = 6;
-    public int height = 6;
+    public int width = 8;
+    public int height = 5;
 
     public HexCell cellPrefab;
 
@@ -26,7 +26,9 @@ public class HexGrid : MonoBehaviour {
 
         for (int z = 0, i = 0; z < height; z++) {
             for (int x = 0; x < width; x++) {
-                CreateCell(x,z,i++);
+                if (!(z % 2 == 1 && x == (width - 1))) {
+                    CreateCell(x, z, i++);
+                } 
             }
         }
     }
@@ -79,9 +81,15 @@ public class HexGrid : MonoBehaviour {
         }
     }
 
+   
+
     void TouchCell(Vector3 position)
     {
         position = transform.InverseTransformPoint(position);
-        Debug.Log("touched at " + position);
+        HexCoordinates coordinates = HexCoordinates.FromPosition(position);
+        Debug.Log("touched at " + coordinates.ToString());
+
     }
+
+    
 }
