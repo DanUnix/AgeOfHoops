@@ -8,8 +8,7 @@ public class CharacterMovement : MonoBehaviour {
     private Color originalColor;
     private bool dragging = false;
     private float distance;
-
-    private GameObject grid;
+    
 
     private Renderer renderer;
 
@@ -19,7 +18,6 @@ public class CharacterMovement : MonoBehaviour {
     }
     void OnMouseEnter() {
         renderer.material.color = mouseOverColor;
-        
     }
 
     void OnMouseExit() {
@@ -29,11 +27,12 @@ public class CharacterMovement : MonoBehaviour {
     void OnMouseDown() {
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         dragging = true;
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 
     void OnMouseUp() {
         dragging = false;
-
+        GetComponent<CapsuleCollider>().enabled = true;
     }
 	// Use this for initialization
 	void Start () {
@@ -50,4 +49,10 @@ public class CharacterMovement : MonoBehaviour {
             transform.position = new Vector3(rayPoint.x, 40.5f, rayPoint.z);          
         }
 	}
+
+    void OnTriggerEnter(Collider cell)
+    {
+        if(cell.tag == "hexcell")
+            transform.position = new Vector3(cell.transform.position.x, 40.5f, cell.transform.position.z);
+    }
 }
