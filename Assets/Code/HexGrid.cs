@@ -18,7 +18,7 @@ public class HexGrid : MonoBehaviour {
 
     Canvas gridCanvas; 
 
-    HexCell[] cells;
+    public HexCell[] cells;
 
     
     void Awake() {
@@ -68,19 +68,19 @@ public class HexGrid : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            HandleInput();
-        }
+        //if (input.getmousebutton(0))
+        //{
+        //    handleinput();
+        //}
     }
 
     void HandleInput()
     {
         Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(inputRay, out hit))
+        RaycastHit hitRay;
+        if (Physics.Raycast(inputRay, out hitRay))
         {
-            TouchCell(hit.point);
+            TouchCell(hitRay.point);
         }
     }
 
