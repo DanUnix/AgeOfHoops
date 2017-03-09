@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour {
 
-    private Color mouseOverColor = Color.blue;
+    private Color mouseOverColor = new Color(1, 0, 0, 0.4f);
     private Color originalColor;
     private bool dragging = false;
     private float distance;
