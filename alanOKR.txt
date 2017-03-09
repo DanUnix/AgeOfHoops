@@ -1,0 +1,2 @@
+hex grid with outlined spots -- Thu by 3:30pm (estimate: 6 hrs)
+camera with zoom and side-scrolling capability -- Thu by 3:30PM (estimate 4 hours)
