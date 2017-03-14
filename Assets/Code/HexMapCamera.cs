@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// Source: http://catlikecoding.com/unity/tutorials/hex-map/part-5/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
