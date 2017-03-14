@@ -14,6 +14,8 @@ public class HexGrid : MonoBehaviour {
 
     public bool debug;
 
+    public bool[] occupiedCells;
+
     HexMesh hexMesh;
 
     Canvas gridCanvas; 
@@ -25,9 +27,11 @@ public class HexGrid : MonoBehaviour {
         gridCanvas = GetComponentInChildren<Canvas>();
         hexMesh = GetComponentInChildren<HexMesh>();
         cells = new HexCell[height * width];
-
+        occupiedCells = new bool[height * width];
+     
         for (int z = 0, i = 0; z < height; z++) {
             for (int x = 0; x < width; x++) {
+                occupiedCells[z * width + x] = false;
                 if (!(z % 2 == 1 && x == (width - 1))) {
                     CreateCell(x, z, i++);
                 } 
