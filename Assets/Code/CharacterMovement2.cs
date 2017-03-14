@@ -10,6 +10,7 @@ public class CharacterMovement2 : MonoBehaviour {
     private Color originalColor;
     private bool dragging = false;
     private float distance;
+    private int oldIndex = 0;
 
     private List<Vector3> cellPositions;
     private Renderer renderer;
@@ -48,7 +49,7 @@ public class CharacterMovement2 : MonoBehaviour {
 
     void OnMouseUp()
     {
-
+        hexgrid.occupiedCells[oldIndex] = false;
         dragging = false;
        
         Vector3 currentPosition = transform.position;
@@ -67,8 +68,9 @@ public class CharacterMovement2 : MonoBehaviour {
                 index = i;
             }
         }
-        transform.position = new Vector3(closetCell.x, 40.5f, closetCell.z);
+        transform.position = new Vector3(closetCell.x, 0f, closetCell.z);
         hexgrid.occupiedCells[index] = true;
+        oldIndex = index;
     }
     // Update is called once per frame
     void Update () {
