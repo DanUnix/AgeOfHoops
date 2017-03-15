@@ -15,6 +15,8 @@ public class CharacterMovement2 : MonoBehaviour {
     private List<Vector3> cellPositions;
     private Renderer renderer;
 
+    public Vector3 globalPosition;
+
     void Awake()
     {
         renderer = GetComponent<Renderer>();
@@ -53,7 +55,8 @@ public class CharacterMovement2 : MonoBehaviour {
         dragging = false;
        
         Vector3 currentPosition = transform.position;
-         
+        globalPosition = currentPosition;
+
         Vector3 closetCell = new Vector3(0,0,0);
         float dist = float.MaxValue;
         int index = 0;
