@@ -1,0 +1,46 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     1136 MB
+    Driver:   20.19.15.4549
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.121 seconds
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.622515 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3f38 -> priority: 1 
+  Thread -> id: 2dc0 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.569898 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2389.
+Total: 0.577331 ms (FindLiveObjects: 0.123591 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.425086 ms  DeleteObjects: 0.006842 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.647303 ms
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 275.
+Total: 7.303456 ms (FindLiveObjects: 0.044475 ms CreateObjectMapping: 0.020954 ms MarkObjects: 0.202707 ms  DeleteObjects: 7.034462 ms)
+
