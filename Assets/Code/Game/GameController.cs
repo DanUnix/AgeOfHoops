@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (hexgrid.occupiedCells[((hexgrid.height / 2) * hexgrid.width) - 1] == true)
+        if (hexgrid.occupiedCells[((hexgrid.height / 2) * hexgrid.width) - 1] == 1)
         {
             SceneManager.LoadScene("Win", LoadSceneMode.Single);
         }

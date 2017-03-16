@@ -30,4 +30,9 @@ public class RoundCounter : MonoBehaviour {
             oldPosition = myCharacter.globalPosition;
         }
 	}
+
+    public int getRoundCounter()
+    {
+        return roundCounter;
+    }
 }
