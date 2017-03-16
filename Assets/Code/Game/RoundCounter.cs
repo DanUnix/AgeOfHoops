@@ -7,7 +7,7 @@ public class RoundCounter : MonoBehaviour {
 
     public Text roundLabel;
 
-    private int roundCounter = 1;
+    public int roundCounter = 1;
 
     public CharacterMovement2 myCharacter;
 
