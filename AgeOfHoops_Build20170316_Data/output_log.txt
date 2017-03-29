@@ -21,31 +21,25 @@ Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOf
 Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.148 seconds
+- Completed reload, in  0.027 seconds
 Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 57.127129 ms
+UnloadTime: 1.429643 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 38a0 -> priority: 1 
-  Thread -> id: 27b8 -> priority: 1 
+  Thread -> id: 3018 -> priority: 1 
+  Thread -> id: 17b4 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.702469 ms
+UnloadTime: 4.618221 ms
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3486.
-Total: 0.850173 ms (FindLiveObjects: 0.175765 ms CreateObjectMapping: 0.020954 ms MarkObjects: 0.642334 ms  DeleteObjects: 0.010263 ms)
+Total: 0.584601 ms (FindLiveObjects: 0.171488 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.382749 ms  DeleteObjects: 0.008553 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at FollowAI.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 20.255342 ms
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 276.
-Total: 3.633765 ms (FindLiveObjects: 0.035922 ms CreateObjectMapping: 0.014112 ms MarkObjects: 0.165073 ms  DeleteObjects: 3.418228 ms)
 

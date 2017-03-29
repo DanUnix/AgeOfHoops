@@ -96,20 +96,20 @@ public class DennisHotrodman : MonoBehaviour {
         z = kurokosNewPosition.z - kurokosOldPosition.z;
         int newIndex;
 
-        if (z > 0 && (oldIndex == 23 || oldIndex == 8))
+        if (z > 1 && (oldIndex == 23 || oldIndex == 8))
         {
             newIndex = oldIndex + hexgrid.width - 1;
 
         }
-        else if (z > 0 && (oldIndex == 0 || oldIndex == 15))
+        else if (z > 1 && (oldIndex == 0 || oldIndex == 15))
         {
             newIndex = oldIndex + hexgrid.width;
         }
-        else if (z < 0 && (oldIndex == 23 || oldIndex == 8))
+        else if (z < -1 && (oldIndex == 23 || oldIndex == 8))
         {
             newIndex = oldIndex - hexgrid.width;
         }
-        else if (z < 0 && (oldIndex == 15 || oldIndex == 30))
+        else if (z < -1 && (oldIndex == 15 || oldIndex == 30))
         {
             newIndex = oldIndex - hexgrid.width + 1;    
         }
