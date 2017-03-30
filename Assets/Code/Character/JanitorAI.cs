@@ -28,6 +28,7 @@ public class JanitorAI : MonoBehaviour {
 
     private float coolDownTime;
     private int timesSpedUp;
+    private bool changeAcceleration;
 
     private float breakTimer;
     private bool onBreak;
@@ -39,6 +40,7 @@ public class JanitorAI : MonoBehaviour {
         timesSpedUp = 0;
         movespeed = 50f;
         acceleration = 0.5f;
+        changeAcceleration = false;
 
         onBreak = false;
         breakTimer = 15.0f;
@@ -78,7 +80,7 @@ public class JanitorAI : MonoBehaviour {
         coolDownTime -= Time.deltaTime;
         if (coolDownTime <= 0 && timesSpedUp > 0) {
             //rb.velocity /= 2;
-            movespeed /= 2;
+            acceleration /= 2;
             upVector = new Vector3(0, 0, -1 * movespeed);
             rightVector = new Vector3(-1 * movespeed, 0, 0);
 
@@ -95,7 +97,10 @@ public class JanitorAI : MonoBehaviour {
         reversed = reversed ? false : true;
 
         if (timesSpedUp < 4)
+        {
+            changeAcceleration = true;
             movespeed *= 2;
+        }
 
         upVector = new Vector3(0, 0, -1 * movespeed);
         rightVector = new Vector3(-1 * movespeed, 0, 0);
@@ -155,28 +160,50 @@ public class JanitorAI : MonoBehaviour {
 
     void SetMovement()
     {
-        //corners
+        //corners movement
         if (transform.position.x <= -557 && transform.position.z >= 311)
         {
+            if (changeAcceleration)
+            {
+                changeAcceleration = false;
+                acceleration *= 10;
+            }
             rb.velocity = reversed ? -1 * rightVector : upVector;
             return;
         }
         else if (transform.position.x <= -557 && transform.position.z <= -311)
         {
+            if (changeAcceleration)
+            {
+                changeAcceleration = false;
+                acceleration *= 10;
+            }
             rb.velocity = reversed ? -1 * upVector : -1 * rightVector;
             return;
         }
         else if (transform.position.x >= 557 && transform.position.z <= -311)
         {
+            if (changeAcceleration)
+            {
+                changeAcceleration = false;
+                acceleration *= 10;
+            }
             rb.velocity = reversed ? rightVector : -1 * upVector;
             return;
         }
         else if (transform.position.x >= 557 && transform.position.z >= 311)
         {
+            if (changeAcceleration)
+            {
+                changeAcceleration = false;
+                acceleration *= 10;
+            }
             rb.velocity = reversed ? upVector : rightVector;
             return;
         }
 
+
+        //middle of the court movement
         if (transform.position.x > -556 && transform.position.x <= 0)
         {
             if (transform.position.z <= -311)
