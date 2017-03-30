@@ -94,7 +94,6 @@ public class DennisHotrodman : MonoBehaviour {
     {
         float z;
         z = kurokosNewPosition.z - kurokosOldPosition.z;
-        Debug.Log(z.ToString());
         int newIndex;
 
         //3 for initial offset of 2.6 in position difference
