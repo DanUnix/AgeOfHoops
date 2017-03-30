@@ -26,6 +26,7 @@ public class RoundCounter : MonoBehaviour {
             roundCounter += 1;
             roundLabel.text = "Round: " + roundCounter.ToString();
             oldPosition = myCharacter.globalPosition;
+ 
             if (myCharacter.stayedInSameSpot == true)
                 myCharacter.stayedInSameSpot = false;
         }

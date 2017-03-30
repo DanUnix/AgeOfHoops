@@ -57,6 +57,8 @@ public class CharacterMovement2 : MonoBehaviour {
         Vector3 oldPosition = globalPosition;
         PinPosition();
         Vector3 newPosition = globalPosition;
+        
+        //set back to false in RoundCounter
         if (oldPosition == newPosition)
             stayedInSameSpot = true;    
     }
