@@ -15,6 +15,7 @@ public class CharacterMovement2 : MonoBehaviour {
     private Renderer renderer;
 
     public Vector3 globalPosition;
+    public bool stayedInSameSpot;
 
     void Awake()
     {
@@ -32,6 +33,7 @@ public class CharacterMovement2 : MonoBehaviour {
                 cellPositions.Add(c.transform.position);
         }
         PinPosition();
+        stayedInSameSpot = false;
     }
 
     void OnMouseEnter()
@@ -52,7 +54,11 @@ public class CharacterMovement2 : MonoBehaviour {
 
     void OnMouseUp()
     {
+        Vector3 oldPosition = globalPosition;
         PinPosition();
+        Vector3 newPosition = globalPosition;
+        if (oldPosition == newPosition)
+            stayedInSameSpot = true;    
     }
     // Update is called once per frame
     void Update () {
@@ -70,7 +76,6 @@ public class CharacterMovement2 : MonoBehaviour {
         dragging = false;
 
         Vector3 currentPosition = transform.position;
-        globalPosition = currentPosition;
 
         Vector3 closetCell = new Vector3(0, 0, 0);
         float dist = float.MaxValue;
@@ -89,5 +94,7 @@ public class CharacterMovement2 : MonoBehaviour {
         transform.position = new Vector3(closetCell.x, 0f, closetCell.z);
         hexgrid.occupiedCells[index] = 1;
         oldIndex = index;
+
+        globalPosition = transform.position;
     }
 }

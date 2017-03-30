@@ -94,22 +94,24 @@ public class DennisHotrodman : MonoBehaviour {
     {
         float z;
         z = kurokosNewPosition.z - kurokosOldPosition.z;
+        Debug.Log(z.ToString());
         int newIndex;
 
-        if (z > 1 && (oldIndex == 23 || oldIndex == 8))
+        //3 for initial offset of 2.6 in position difference
+        if (z > 3 && (oldIndex == 23 || oldIndex == 8))
         {
             newIndex = oldIndex + hexgrid.width - 1;
 
         }
-        else if (z > 1 && (oldIndex == 0 || oldIndex == 15))
+        else if (z > 3 && (oldIndex == 0 || oldIndex == 15))
         {
             newIndex = oldIndex + hexgrid.width;
         }
-        else if (z < -1 && (oldIndex == 23 || oldIndex == 8))
+        else if (z < -3 && (oldIndex == 23 || oldIndex == 8))
         {
             newIndex = oldIndex - hexgrid.width;
         }
-        else if (z < -1 && (oldIndex == 15 || oldIndex == 30))
+        else if (z < -3 && (oldIndex == 15 || oldIndex == 30))
         {
             newIndex = oldIndex - hexgrid.width + 1;    
         }
