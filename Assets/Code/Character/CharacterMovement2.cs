@@ -17,6 +17,8 @@ public class CharacterMovement2 : MonoBehaviour {
     public Vector3 globalPosition;
     public bool stayedInSameSpot;
 
+    public Animator animator;
+
     void Awake()
     {
         renderer = GetComponent<Renderer>();
@@ -34,6 +36,7 @@ public class CharacterMovement2 : MonoBehaviour {
         }
         PinPosition();
         stayedInSameSpot = false;
+        animator = GetComponent<Animator>();
     }
 
     void OnMouseEnter()
@@ -50,6 +53,7 @@ public class CharacterMovement2 : MonoBehaviour {
     {
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         dragging = true;
+        animator.SetBool("Dragging", true);
     }
 
     void OnMouseUp()
@@ -76,6 +80,7 @@ public class CharacterMovement2 : MonoBehaviour {
     {
         hexgrid.occupiedCells[oldIndex] = 0;
         dragging = false;
+        animator.SetBool("Dragging", false);
 
         Vector3 currentPosition = transform.position;
 
