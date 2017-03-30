@@ -22,7 +22,8 @@ public class FollowAI : MonoBehaviour {
         cellPositions = new List<Vector3>();
         foreach (HexCell cell in cells)
         {
-            cellPositions.Add(cell.transform.position);
+            if (cell != null) // skip the null cells (to make symmetrical board)
+                cellPositions.Add(cell.transform.position);
         }
 
         currRound = RC.roundCounter;
