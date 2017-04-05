@@ -21,22 +21,22 @@ Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOf
 Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.027 seconds
+- Completed reload, in  0.721 seconds
 Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170316_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.429643 ms
+UnloadTime: 1.917167 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3018 -> priority: 1 
-  Thread -> id: 17b4 -> priority: 1 
+  Thread -> id: 21b4 -> priority: 1 
+  Thread -> id: 3fc4 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.618221 ms
+UnloadTime: 4.518150 ms
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3486.
-Total: 0.584601 ms (FindLiveObjects: 0.171488 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.382749 ms  DeleteObjects: 0.008553 ms)
+Total: 0.769774 ms (FindLiveObjects: 0.197147 ms CreateObjectMapping: 0.030790 ms MarkObjects: 0.529861 ms  DeleteObjects: 0.011546 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at FollowAI.Start () [0x00000] in <filename unknown>:0 
