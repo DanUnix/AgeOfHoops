@@ -8,24 +8,28 @@ public class ShootBall : MonoBehaviour {
 
     public GameObject hoopPosition;
     public GameObject basketball;
-
+    // Boolean value that status is based on the ball being shot
+    public bool ballShot = false;
 
     private float multiplier = 15;
     private Vector3 targetPosition;
+    
 
     // Use this for initialization
     void Start () {
         targetPosition = hoopPosition.transform.position;
         Physics.gravity *= multiplier;
         
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
 
+        // Spacebar to shoot the ball
         bool down = Input.GetKeyDown(KeyCode.Space);
-
-        if (down)
+        
+        if (down && ballShot == false)
         {
             // Create basketball object at character's position
             var ball = GameObject.Instantiate(basketball, this.transform.position + this.transform.up, Quaternion.identity) as GameObject;
@@ -46,10 +50,10 @@ public class ShootBall : MonoBehaviour {
             ball.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             ball.GetComponent<Rigidbody>().isKinematic = false;
             ball.GetComponent<Rigidbody>().WakeUp();
+            ballShot = true;
+            
         }
     }
-
-   
 
     private Vector3 findInitialVelocity(Vector3 startPosition, Vector3 finalPosition, float maxHeightOffset = 0.6f, float rangeOffSet = 0.11f)
     {
