@@ -19,7 +19,6 @@ public class BoardSound : MonoBehaviour {
     {
 
         boardEffect.Play();
-        sc.Score += 1;
     }
     // Use this for initialization
     void Start()
