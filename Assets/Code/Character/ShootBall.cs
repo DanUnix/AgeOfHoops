@@ -5,15 +5,22 @@ using UnityEngine;
 
 public class ShootBall : MonoBehaviour {
 
-
+    // The position of the hoop for the ball to direct towards
     public GameObject hoopPosition;
+
+    // The targetPosition
+    private Vector3 targetPosition;
+    // The basketball object
     public GameObject basketball;
+
     // Boolean value that status is based on the ball being shot
     public bool ballShot = false;
 
     private float multiplier = 15;
-    private Vector3 targetPosition;
+
     
+    
+    // When ball enters the hoop score counter increases
 
     // Use this for initialization
     void Start () {
@@ -54,6 +61,7 @@ public class ShootBall : MonoBehaviour {
             
         }
     }
+    
 
     private Vector3 findInitialVelocity(Vector3 startPosition, Vector3 finalPosition, float maxHeightOffset = 0.6f, float rangeOffSet = 0.11f)
     {
