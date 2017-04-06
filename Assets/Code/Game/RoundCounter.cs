@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class RoundCounter : MonoBehaviour {
 
+    // Round label that will hold text of incrementing round
     public Text roundLabel;
 
+    // Counter for number of rounds
     public int roundCounter = 1;
 
+    // 3 character objects
     public CharacterMovement2 myCharacter;
     public CharacterMovement2 mc2;
     public CharacterMovement2 mc3;
    
-
+    // Old positions of the 3 characteres
     private Vector3 oldPosition;
     private Vector3 oldPosition2;
     private Vector3 oldPosition3;
+
     // Keep track of ball Shot
     public ShootBall myBallStatus;
    
@@ -41,13 +45,6 @@ public class RoundCounter : MonoBehaviour {
             oldPosition = myCharacter.globalPosition;
             oldPosition2 = mc2.globalPosition;
             oldPosition3 = mc3.globalPosition;
-            //if (myCharacter.stayedInSameSpot == true)
-            //    myCharacter.stayedInSameSpot = false;
-           // if (mc2.stayedInSameSpot == true)
-           //     mc2.stayedInSameSpot = false;
-            //if (mc3.stayedInSameSpot == true)
-            //    mc3.stayedInSameSpot = false;
-
             // When round is incremented make the ball shootable again.
             
             myBallStatus.ballShot = false;
