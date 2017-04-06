@@ -9,6 +9,7 @@ public class BasketController : MonoBehaviour {
 
     public RoundCounter rc;
 
+    private int r;
     AudioSource swishEffect;
 
     void OnCollisionEnter()
@@ -21,7 +22,8 @@ public class BasketController : MonoBehaviour {
         
         swishEffect.Play();
         sc.Score += 1;
-        rc.roundCounter += 1;
+        rc.updateRoundLabel();
+        
     }
     // Use this for initialization
     void Start () {
@@ -30,6 +32,6 @@ public class BasketController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+         r = rc.getRoundCounter();
 	}
 }

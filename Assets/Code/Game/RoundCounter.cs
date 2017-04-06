@@ -9,7 +9,7 @@ public class RoundCounter : MonoBehaviour {
     public Text roundLabel;
 
     // Counter for number of rounds
-    public int roundCounter = 1;
+    public int roundCounter;
 
     // 3 character objects
     public CharacterMovement2 myCharacter;
@@ -27,6 +27,7 @@ public class RoundCounter : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         oldPosition = myCharacter.globalPosition;
+        this.roundCounter = 1;
         roundLabel.text = "Round: 1";
 	}
 	
@@ -40,8 +41,8 @@ public class RoundCounter : MonoBehaviour {
             && (mc3.globalPosition != oldPosition3))
         {
             
-            roundCounter += 1;
-            roundLabel.text = "Round: " + roundCounter.ToString();
+            
+            updateRoundLabel();
             oldPosition = myCharacter.globalPosition;
             oldPosition2 = mc2.globalPosition;
             oldPosition3 = mc3.globalPosition;
@@ -54,6 +55,12 @@ public class RoundCounter : MonoBehaviour {
 
     public int getRoundCounter()
     {
-        return roundCounter;
+        return this.roundCounter;
+    }
+
+    public void updateRoundLabel()
+    {
+        roundCounter += 1;
+        roundLabel.text = "Round: " + roundCounter.ToString();
     }
 }
