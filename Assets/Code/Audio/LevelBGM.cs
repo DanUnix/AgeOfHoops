@@ -39,7 +39,7 @@ public class LevelBGM : MonoBehaviour {
             {
                 songText.text = "Song: Time to Attack (Santa)";
                 bgmSource.clip = herNameisCoco;
-                bgmSource.volume = 0.2f;
+                bgmSource.volume = 0.2f;    
                 bgmSource.Play();
             }
         }
