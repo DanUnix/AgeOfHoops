@@ -10,7 +10,9 @@ public class RoundCounter : MonoBehaviour {
     public int roundCounter = 1;
 
     public CharacterMovement2 myCharacter;
-    
+
+    public CharacterMovement2[] mc;
+
     private Vector3 oldPosition;
 
     // Keep track of ball Shot
@@ -24,9 +26,9 @@ public class RoundCounter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        
-        
+
+
+     
         if ((myCharacter.globalPosition != oldPosition || myCharacter.stayedInSameSpot == true))
         {
             
@@ -40,7 +42,7 @@ public class RoundCounter : MonoBehaviour {
             // When round is incremented make the ball shootable again.
             myBallStatus.ballShot = false;
         }
-        
+               
 	}
 
     public int getRoundCounter()
