@@ -8,6 +8,9 @@ public class Timer : MonoBehaviour {
     // Timer Label
     public Text timerLabel;
 
+    // RoundCounter controller
+    private RoundCounter rc;
+    private int r;
     // The time that will be displayed to the user
     private float time;
     
@@ -30,6 +33,8 @@ public class Timer : MonoBehaviour {
         if (time <= 0)
         {
             time = 30.0f;
+            rc.updateRoundLabel();
+            
         }
 	}
 }

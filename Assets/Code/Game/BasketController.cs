@@ -22,7 +22,7 @@ public class BasketController : MonoBehaviour {
         
         swishEffect.Play();
         sc.Score += 1;
-        rc.updateRoundLabel();
+       // rc.updateRoundLabel();
         
     }
     // Use this for initialization
