@@ -31,9 +31,9 @@ public class RoundCounter : MonoBehaviour {
 
 
      
-        if ((myCharacter.globalPosition != oldPosition || myCharacter.stayedInSameSpot == true)
-            && (mc2.globalPosition != oldPosition2 || mc2.stayedInSameSpot == true)
-            && (mc3.globalPosition != oldPosition3 || mc3.stayedInSameSpot == true))
+        if ((myCharacter.globalPosition != oldPosition)
+            && (mc2.globalPosition != oldPosition2 )
+            && (mc3.globalPosition != oldPosition3))
         {
             
             roundCounter += 1;
@@ -41,12 +41,12 @@ public class RoundCounter : MonoBehaviour {
             oldPosition = myCharacter.globalPosition;
             oldPosition2 = mc2.globalPosition;
             oldPosition3 = mc3.globalPosition;
-            if (myCharacter.stayedInSameSpot == true)
-                myCharacter.stayedInSameSpot = false;
-            if (mc2.stayedInSameSpot == true)
-                mc2.stayedInSameSpot = false;
-            if (mc3.stayedInSameSpot == true)
-                mc3.stayedInSameSpot = false;
+            //if (myCharacter.stayedInSameSpot == true)
+            //    myCharacter.stayedInSameSpot = false;
+           // if (mc2.stayedInSameSpot == true)
+           //     mc2.stayedInSameSpot = false;
+            //if (mc3.stayedInSameSpot == true)
+            //    mc3.stayedInSameSpot = false;
 
             // When round is incremented make the ball shootable again.
             
