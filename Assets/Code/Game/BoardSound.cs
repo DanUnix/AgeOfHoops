@@ -2,32 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasketController : MonoBehaviour {
+public class BoardSound : MonoBehaviour {
 
     // reference the scoretext that will be incremented
     public ScoreController sc;
-    
 
-    AudioSource swishEffect;
+
+    AudioSource boardEffect;
 
     void OnCollisionEnter()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider other)
     {
-        
-        swishEffect.Play();
+
+        boardEffect.Play();
         sc.Score += 1;
     }
     // Use this for initialization
-    void Start () {
-        swishEffect = GetComponent<AudioSource>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        boardEffect = GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }

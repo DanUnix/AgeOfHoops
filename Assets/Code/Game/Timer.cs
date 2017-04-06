@@ -7,8 +7,8 @@ public class Timer : MonoBehaviour {
 
     public Text timerLabel;
 
-    private float time;
-
+    private float time = 30.0f;
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -16,16 +16,12 @@ public class Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        time += Time.deltaTime;
 
-
-        var minutes = time / 60;
-        var seconds = time % 60;
-        var frac = (time * 100) % 100;
-
+        time -= Time.deltaTime;
 
         // Update the time on the label
-        timerLabel.text = "Timer: " + string.Format("{1:00} : {2:00}", minutes, seconds, frac);
+        System.Math.Round(time, 2);
+        timerLabel.text = "Timer: " + string.Format(time.ToString("0.00"));
         	
 	}
 }
