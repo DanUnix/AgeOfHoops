@@ -6,7 +6,8 @@ public class BasketController : MonoBehaviour {
 
     // reference the scoretext that will be incremented
     public ScoreController sc;
-    
+
+    public RoundCounter rc;
 
     AudioSource swishEffect;
 
@@ -20,6 +21,7 @@ public class BasketController : MonoBehaviour {
         
         swishEffect.Play();
         sc.Score += 1;
+        rc.roundCounter += 1;
     }
     // Use this for initialization
     void Start () {
