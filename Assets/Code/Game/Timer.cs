@@ -22,6 +22,9 @@ public class Timer : MonoBehaviour {
         // Update the time on the label
         System.Math.Round(time, 2);
         timerLabel.text = "Timer: " + string.Format(time.ToString("0.00"));
-        	
+        if (time <= 0)
+        {
+            time = 30.0f;
+        }
 	}
 }
