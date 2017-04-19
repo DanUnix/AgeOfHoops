@@ -26,6 +26,8 @@ public class DennisHotrodman : MonoBehaviour {
     private Vector3 kurokosOldPosition;
     private Vector3 kurokosNewPosition;
 
+    private Vector3 originalPosition;
+
     void Awake()
     {
         oldIndex = 0;
@@ -47,6 +49,8 @@ public class DennisHotrodman : MonoBehaviour {
         PinPosition();
         kurokosOldPosition = kuroko.globalPosition;
         kurokosNewPosition = kurokosOldPosition;
+
+        originalPosition = transform.position;
     }
 
 
@@ -128,5 +132,10 @@ public class DennisHotrodman : MonoBehaviour {
         hexgrid.occupiedCells[oldIndex] = 0;
         hexgrid.occupiedCells[newIndex] = 2;
         oldIndex = newIndex;
+    }
+
+    public void resetPosition()
+    {
+        transform.position = originalPosition;
     }
 }

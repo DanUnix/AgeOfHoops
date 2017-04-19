@@ -12,6 +12,7 @@ public class FollowAI : MonoBehaviour {
     private int currRound;
     private int oldIndex = 0;
     public Vector3 globalPosition;
+    private Vector3 originalPosition;
 
     public RoundCounter RC;
 
@@ -27,6 +28,7 @@ public class FollowAI : MonoBehaviour {
         }
 
         currRound = RC.roundCounter;
+        originalPosition = transform.position;
     }
 	
 	// Update is called once per frame
@@ -65,5 +67,10 @@ public class FollowAI : MonoBehaviour {
         transform.position = new Vector3(closetCell.x, 0f, closetCell.z);
         hexgrid.occupiedCells[index] = 1;
         oldIndex = index;
+    }
+
+    public void resetPosition()
+    {
+        transform.position = originalPosition;
     }
 }

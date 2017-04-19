@@ -19,18 +19,16 @@ public class RoundCounter : MonoBehaviour {
     public CharacterMovement2 p1;
     public CharacterMovement2 p2;
     public CharacterMovement2 p3;
-   
-    // Old positions of the 3 characteres
-    private Vector3 oldPosition1;
-    private Vector3 oldPosition2;
-    private Vector3 oldPosition3;
+
+    public FollowAI Aomine;
+    public DennisHotrodman dennisHotrodman;
+  
 
     // Keep track of ball Shot
     public ShootBall myBallStatus;
    
     // Use this for initialization
 	void Start () {
-        setOldPositions();
         setOldScores();
 
         this.roundCounter = 1;
@@ -43,20 +41,18 @@ public class RoundCounter : MonoBehaviour {
         if (allCharactersMoved())
         {
             updateRoundLabel();
-            setOldPositions();
 
             // When round is incremented make the ball shootable again.
             myBallStatus.ballShot = false;
         }
+
+        if (myBallStatus.ballShot == true)
+        {
+            myBallStatus.ballShot = false;
+            StartCoroutine(waitForBall());
+        }
                
 	}
-
-    void setOldPositions()
-    {
-        oldPosition1 = p1.globalPosition;
-        oldPosition2 = p2.globalPosition;
-        oldPosition3 = p3.globalPosition;
-    }
 
     public int getRoundCounter()
     {
@@ -71,7 +67,7 @@ public class RoundCounter : MonoBehaviour {
         if (roundCounter > 10)
             resetRoundCounter();
 
-        roundLabel.text = "Round: " + roundCounter.ToString();
+        roundLabel.text = "Round: " + roundCounter;
         markCharactersMovable();
     }
 
@@ -81,7 +77,7 @@ public class RoundCounter : MonoBehaviour {
         roundCounter = 0;
 
         resetCharacters();
-        setOldPositions();
+
     }
 
     void setOldScores()
@@ -95,14 +91,17 @@ public class RoundCounter : MonoBehaviour {
         p1.resetPosition();
         p2.resetPosition();
         p3.resetPosition();
+
+        Aomine.resetPosition();
+        dennisHotrodman.resetPosition();
     }
 
 
     bool allCharactersMoved()
     {
-        return p1.movedThisRound
-            && p2.movedThisRound
-            && p3.movedThisRound;
+        return (p1.movedThisRound || p1.stayedInSameSpot)
+            && (p2.movedThisRound || p2.stayedInSameSpot)
+            && (p3.movedThisRound || p3.stayedInSameSpot);
     }
 
     void markCharactersMovable()
@@ -110,5 +109,12 @@ public class RoundCounter : MonoBehaviour {
         p1.movedThisRound = false;
         p2.movedThisRound = false;
         p3.movedThisRound = false;
+    }
+
+    IEnumerator waitForBall()
+    {
+        yield return new WaitForSeconds(4);
+        updateRoundLabel();
+        resetCharacters();
     }
 }

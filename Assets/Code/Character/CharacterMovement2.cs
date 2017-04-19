@@ -14,6 +14,7 @@ public class CharacterMovement2 : MonoBehaviour {
     private List<Vector3> cellPositions;
     private Renderer renderer;
 
+    private Vector3 originalPosition;
     public Vector3 globalPosition;
     public bool stayedInSameSpot;
     public bool movedThisRound;
@@ -41,6 +42,7 @@ public class CharacterMovement2 : MonoBehaviour {
         stayedInSameSpot = false;
         movedThisRound = false;
         animator = GetComponent<Animator>();
+        originalPosition = transform.position;
     }
 
     void OnMouseEnter()
@@ -60,6 +62,7 @@ public class CharacterMovement2 : MonoBehaviour {
             distance = Vector3.Distance(transform.position, Camera.main.transform.position);
             dragging = true;
             animator.SetBool("Dragging", true);
+            stayedInSameSpot = false;
         }
     }
 
@@ -135,7 +138,7 @@ public class CharacterMovement2 : MonoBehaviour {
 
     public void resetPosition()
     {
-
+        transform.position = originalPosition;
     }
 
 
