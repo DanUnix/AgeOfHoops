@@ -10,6 +10,8 @@ public class IntroSceneStory : MonoBehaviour {
     Text storyText;
     public Text clickToContinue;
     private int counter;
+    private bool swapText;
+    private bool finalMessage;
 
     public Image canvasImage;
 
@@ -20,15 +22,18 @@ public class IntroSceneStory : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         counter = 0;
+        swapText = true;
+        finalMessage = false;
+
         storyText = GetComponent<Text>();
         startVolume = backgroundSong.volume;
         songFadingOut = false;
-        StartCoroutine(wait10Seconds());
+        StartCoroutine(waitMySeconds(10));
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && swapText)
         {
             switch (counter)
             {
@@ -91,29 +96,33 @@ public class IntroSceneStory : MonoBehaviour {
                     break;
                 case 15:
                     storyText.text = "Good luck, and don't fuck it up.";
+                    finalMessage = true;
                     break;
                 case 16:
                     songFadingOut = true;
                     break;
             }
+            swapText = false;
             ++counter;
-            StartCoroutine(wait10Seconds());
+            StartCoroutine(waitMySeconds(1));
 
         }
 
         if (songFadingOut)
         {
             if (backgroundSong.volume > 0)
-                backgroundSong.volume -= startVolume * Time.deltaTime / 5;
+                backgroundSong.volume -= startVolume * Time.deltaTime / 3;
             else
                 SceneManager.LoadScene("AgeOfHoops", LoadSceneMode.Single);
         }
     }
     
-    IEnumerator wait10Seconds()
+    IEnumerator waitMySeconds(int sec)
     {
         clickToContinue.text = "";
-        yield return new WaitForSeconds(10);
-        clickToContinue.text = "(Press any key to continue)";
+        yield return new WaitForSeconds(sec);
+        if (!finalMessage)
+            clickToContinue.text = "(Press any key to continue)";
+        swapText = true;
     }   
 }
