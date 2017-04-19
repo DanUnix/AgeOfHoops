@@ -9,6 +9,8 @@ public class RoundCounter : MonoBehaviour {
     public Text roundLabel;
 
     public Timer gameTimer;
+    public ScoreController gameScore;
+    private int oldAIScore, oldPlayerScore;
 
     // Counter for number of rounds
     public int roundCounter;
@@ -28,7 +30,8 @@ public class RoundCounter : MonoBehaviour {
    
     // Use this for initialization
 	void Start () {
-        setPositions();
+        setOldPositions();
+        setOldScores();
 
         this.roundCounter = 1;
         roundLabel.text = "Round: 1";
@@ -37,22 +40,18 @@ public class RoundCounter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
      
-        if ((p1.globalPosition != oldPosition1)
-            && (p2.globalPosition != oldPosition2 )
-            && (p3.globalPosition != oldPosition3))
+        if (allCharactersMoved())
         {
-            
-            
             updateRoundLabel();
-            setPositions();
+            setOldPositions();
+
             // When round is incremented make the ball shootable again.
-            
             myBallStatus.ballShot = false;
         }
                
 	}
 
-    void setPositions()
+    void setOldPositions()
     {
         oldPosition1 = p1.globalPosition;
         oldPosition2 = p2.globalPosition;
@@ -68,6 +67,48 @@ public class RoundCounter : MonoBehaviour {
     {
         gameTimer.resetTimer();
         roundCounter += 1;
+
+        if (roundCounter > 10)
+            resetRoundCounter();
+
         roundLabel.text = "Round: " + roundCounter.ToString();
+        markCharactersMovable();
+    }
+
+    void resetRoundCounter()
+    {
+        gameScore.aiScore += 1;
+        roundCounter = 0;
+
+        resetCharacters();
+        setOldPositions();
+    }
+
+    void setOldScores()
+    {
+        oldAIScore = gameScore.aiScore;
+        oldPlayerScore = gameScore.playerScore;
+    }
+
+    void resetCharacters()
+    {
+        p1.resetPosition();
+        p2.resetPosition();
+        p3.resetPosition();
+    }
+
+
+    bool allCharactersMoved()
+    {
+        return p1.movedThisRound
+            && p2.movedThisRound
+            && p3.movedThisRound;
+    }
+
+    void markCharactersMovable()
+    {
+        p1.movedThisRound = false;
+        p2.movedThisRound = false;
+        p3.movedThisRound = false;
     }
 }

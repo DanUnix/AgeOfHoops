@@ -16,6 +16,7 @@ public class CharacterMovement2 : MonoBehaviour {
 
     public Vector3 globalPosition;
     public bool stayedInSameSpot;
+    public bool movedThisRound;
 
     public bool moved;
     public Animator animator;
@@ -38,6 +39,7 @@ public class CharacterMovement2 : MonoBehaviour {
         }
         PinPosition();
         stayedInSameSpot = false;
+        movedThisRound = false;
         animator = GetComponent<Animator>();
     }
 
@@ -53,20 +55,28 @@ public class CharacterMovement2 : MonoBehaviour {
 
     void OnMouseDown()
     {
-        distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-        dragging = true;
-        animator.SetBool("Dragging", true);
+        if (!movedThisRound)
+        {
+            distance = Vector3.Distance(transform.position, Camera.main.transform.position);
+            dragging = true;
+            animator.SetBool("Dragging", true);
+        }
     }
 
     void OnMouseUp()
     {
-        Vector3 oldPosition = globalPosition;
-        PinPosition();
-        Vector3 newPosition = globalPosition;
-        
-        //set back to false in RoundCounter
-        if (oldPosition == newPosition && moved)
-            stayedInSameSpot = true;    
+        if (!movedThisRound)
+        {
+            Vector3 oldPosition = globalPosition;
+            PinPosition();
+            Vector3 newPosition = globalPosition;
+
+            //set back to false in RoundCounter
+            if (oldPosition == newPosition && moved)
+                stayedInSameSpot = true;
+
+            movedThisRound = true;
+        }   
     }
     // Update is called once per frame
     void Update () {
@@ -121,6 +131,13 @@ public class CharacterMovement2 : MonoBehaviour {
         globalPosition = transform.position;
         moved = true;
     }
+
+
+    public void resetPosition()
+    {
+
+    }
+
 
 
     bool validMove(int newindex)
