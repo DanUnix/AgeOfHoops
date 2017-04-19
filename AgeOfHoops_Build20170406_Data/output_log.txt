@@ -1,50 +1,43 @@
-Initialize engine version: 5.5.1f1 (88d00a7498cd)
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 860M (ID=0x1392)
-    Vendor:   NVIDIA
-    VRAM:     2019 MB
-    Driver:   20.19.15.4531
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     1136 MB
+    Driver:   20.19.15.4549
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.067 seconds
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  1.891 seconds
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\cygwinClean\cygwin64\home\alane_000\CS426\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
-XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.875818 ms
+UnloadTime: 2.619371 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1af0 -> priority: 1 
-  Thread -> id: 2848 -> priority: 1 
+  Thread -> id: eb4 -> priority: 1 
+  Thread -> id: 4954 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 9.402375 ms
+UnloadTime: 5.761762 ms
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3504.
-Total: 5.647156 ms (FindLiveObjects: 0.303205 ms CreateObjectMapping: 0.058588 ms MarkObjects: 0.849746 ms  DeleteObjects: 4.423641 ms)
+Total: 4.437322 ms (FindLiveObjects: 0.124874 ms CreateObjectMapping: 0.022665 ms MarkObjects: 0.475977 ms  DeleteObjects: 3.812949 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at Timer.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.605541 ms
-
-Unloading 61 unused Assets to reduce memory usage. Loaded Objects now: 288.
-Total: 13.525377 ms (FindLiveObjects: 0.067141 ms CreateObjectMapping: 0.054739 ms MarkObjects: 0.400283 ms  DeleteObjects: 13.002786 ms)
 
