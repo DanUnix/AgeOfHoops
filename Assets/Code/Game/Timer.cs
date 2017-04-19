@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour {
     public Text timerLabel;
 
     // RoundCounter controller
-    private RoundCounter rc;
+    public RoundCounter rc;
     private int r;
     // The time that will be displayed to the user
     private float time;
