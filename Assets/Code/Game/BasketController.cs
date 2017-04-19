@@ -21,7 +21,7 @@ public class BasketController : MonoBehaviour {
     {
         
         swishEffect.Play();
-        sc.Score += 1;
+        sc.playerScore += 1;
         rc.updateRoundLabel();
         
     }

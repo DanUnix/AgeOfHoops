@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
 
     // RoundCounter controller
     public RoundCounter rc;
-    private int r;
+
     // The time that will be displayed to the user
     private float time;
     
@@ -32,9 +32,12 @@ public class Timer : MonoBehaviour {
         timerLabel.text = "Timer: " + string.Format(time.ToString("0.00"));
         if (time <= 0)
         {
-            time = 30.0f;
             rc.updateRoundLabel();
-            
         }
 	}
+
+    public void resetTimer()
+    {
+        time = 30.0f;
+    }
 }

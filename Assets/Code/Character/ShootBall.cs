@@ -14,7 +14,7 @@ public class ShootBall : MonoBehaviour {
     public GameObject basketball;
 
     // Boolean value that status is based on the ball being shot
-    public bool ballShot = false;
+    public bool ballShot;
 
     private float multiplier = 15;
 
@@ -26,8 +26,8 @@ public class ShootBall : MonoBehaviour {
     void Start () {
         targetPosition = hoopPosition.transform.position;
         Physics.gravity *= multiplier;
-        
-        
+
+        ballShot = false;
     }
 	
 	// Update is called once per frame

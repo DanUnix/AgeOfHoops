@@ -20,11 +20,6 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (hexgrid.occupiedCells[((hexgrid.height / 2) * hexgrid.width) - 1] == 1)
-        {
-            songFading = true;
- 
-        }
 
         if(songFading)
         {
@@ -34,4 +29,9 @@ public class GameController : MonoBehaviour {
                 SceneManager.LoadScene("Win", LoadSceneMode.Single);
         }
 	}
+
+    public void triggerVictory()
+    {
+        songFading = true;
+    }
 }
