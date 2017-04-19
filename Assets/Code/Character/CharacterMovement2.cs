@@ -125,73 +125,62 @@ public class CharacterMovement2 : MonoBehaviour {
 
     bool validMove(int newindex)
     {
-        if (oldIndex == 0)
+        if ((oldIndex - newindex) == 0) //stay in same spot
         {
-            if (newindex == 0 || newindex == 1 || newindex == 8)
+            return true;
+        }
+        else if ((oldIndex - newindex) == 1) //move left
+        {
+            if (oldIndex == 30 || oldIndex == 23 || oldIndex == 15
+                || oldIndex == 8 || oldIndex == 0)
+                return false;
+            else
                 return true;
         }
-        else if (oldIndex == 15)
+        else if ((oldIndex - newindex) == -1) //move right
         {
-            if (newindex == 15 || newindex == 8 || newindex == 16 || newindex == 23)
+            if (oldIndex == 29 || oldIndex == 22
+                || oldIndex == 14 || oldIndex == 7)
+                return false;
+            else
                 return true;
         }
-        else if (oldIndex == 30)
+        else if ((oldIndex - newindex) == 7) //move down right
         {
-            if (newindex == 30 || newindex == 31 || newindex == 23)
+            if (oldIndex == 37 || oldIndex == 22 || //right edges
+                (oldIndex >= 0 && oldIndex <= 7)) // bottom row
+                return false;
+            else
                 return true;
         }
-        else if (oldIndex == 7)
+        else if ((oldIndex - newindex) == -8) //move up right
         {
-            if (newindex == 7 || newindex == 6 || newindex == 14)
+            if (oldIndex == 7 || oldIndex == 22 || // right edges
+                (oldIndex >= 30 && oldIndex <= 37)) // top row
+                return false;
+            else
                 return true;
         }
-        else if (oldIndex == 22)
+        else if ((oldIndex - newindex) == 8) //move down left
         {
-            if (newindex == 22 || newindex == 21 || newindex == 14 || newindex == 37)
+            if (oldIndex == 30 || oldIndex == 15 || // left edges
+                (oldIndex >= 0 && oldIndex <= 7)) // bottom row
+                return false;
+            else
                 return true;
         }
-        else if (oldIndex == 37)
+        else if ((oldIndex - newindex) == -7) //move up left
         {
-            if (newindex == 37 || newindex == 36 || newindex == 29)
+            if (oldIndex == 0 || oldIndex == 15 || // left edges
+                (oldIndex >= 30 && oldIndex <= 37)) // top row
+                return false;
+            else
                 return true;
         }
-        else if ((oldIndex >= 8 && oldIndex <= 14) || ((oldIndex >= 23 && oldIndex <= 29)))
+        else
         {
-            if (newindex == oldIndex || newindex == oldIndex + 8 || newindex == oldIndex + 7 ||
-                newindex == oldIndex - 7 || newindex == oldIndex - 8)
-                return true;
+            return false;
+        }
 
-            if (oldIndex == 8 && newindex == 9)
-                return true;
-            else if (oldIndex == 14 && newindex == 13)
-                return true;
-            else if (oldIndex == 23 && newindex == 24)
-                return true;
-            else if (oldIndex == 29 && newindex == 28)
-                return true;
-            else if ((oldIndex != 8 && oldIndex != 14 && oldIndex != 23 && oldIndex != 29)
-                && (oldIndex == newindex + 1 || oldIndex == newindex - 1))
-                return true;
-        }
-        else if (oldIndex >= 16 && oldIndex <= 21)
-        {
-            if (newindex == oldIndex || newindex == oldIndex + 8 || newindex == oldIndex + 7 ||
-                newindex == oldIndex - 7 || newindex == oldIndex - 8 ||
-                newindex == oldIndex + 1 || newindex == oldIndex - 1)
-                return true;
-        }
-        else if (oldIndex >= 1 || oldIndex <= 6)
-        {
-            if (newindex == oldIndex || newindex == oldIndex + 8 || newindex == oldIndex + 7 ||
-                newindex == oldIndex + 1 || newindex == oldIndex - 1)
-                return true;
-        }
-        else //31-36
-        {
-            if (newindex == oldIndex || newindex == oldIndex - 8 || newindex == oldIndex - 7 ||
-                newindex == oldIndex + 1 || newindex == oldIndex - 1)
-                return true;
-        }
-        return false;
     }
 }
