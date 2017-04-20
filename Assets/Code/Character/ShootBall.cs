@@ -59,7 +59,7 @@ public class ShootBall : MonoBehaviour {
             ball.GetComponent<Rigidbody>().isKinematic = false;
             ball.GetComponent<Rigidbody>().WakeUp();
             ballShot = true;
-            
+            Destroy(ball, 15f);
         }
     }
     
