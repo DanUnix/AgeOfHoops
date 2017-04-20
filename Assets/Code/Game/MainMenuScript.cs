@@ -12,18 +12,23 @@ public class MainMenuScript : MonoBehaviour {
     public Button controlText;
     public Button exitText;
 
+    private bool isShowing;
+
 	// Use this for initialization
 	void Start () {
 
+        isShowing = false;
         quitMenu = quitMenu.GetComponent<Canvas>();
+        quitMenu.enabled = false;
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
-        quitMenu.enabled = false;
+        controlText = controlText.GetComponent<Button>();
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
     public void ExitPress()
@@ -31,6 +36,7 @@ public class MainMenuScript : MonoBehaviour {
         quitMenu.enabled = true;
         startText.enabled = false;
         exitText.enabled = false;
+        controlText.enabled = false;
     }
 
     public void noPress()
@@ -38,6 +44,7 @@ public class MainMenuScript : MonoBehaviour {
         quitMenu.enabled = false;
         startText.enabled = true;
         exitText.enabled = true;
+        controlText.enabled = true;
     }
 
     public void StartLevel()
