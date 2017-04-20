@@ -17,6 +17,6 @@ public class Billboard : MonoBehaviour {
         transform.Rotate(90, 0, 0);
 
         Vector3 k = kuroko.transform.position;
-        transform.position = new Vector3(k.x, k.y + 140, k.z);
+        transform.position = new Vector3(k.x, k.y + 140 , k.z);
     }
 }

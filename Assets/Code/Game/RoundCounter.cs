@@ -26,7 +26,7 @@ public class RoundCounter : MonoBehaviour {
 
     // Keep track of ball Shot
     public ShootBall myBallStatus;
-   
+
     // Use this for initialization
 	void Start () {
         setOldScores();
@@ -48,8 +48,9 @@ public class RoundCounter : MonoBehaviour {
 
         if (myBallStatus.ballShot == true)
         {
-            myBallStatus.ballShot = false;
+            myBallStatus.locked = true;
             StartCoroutine(waitForBall());
+            myBallStatus.ballShot = false;
         }
                
 	}
@@ -116,5 +117,6 @@ public class RoundCounter : MonoBehaviour {
         yield return new WaitForSeconds(4);
         updateRoundLabel();
         resetCharacters();
+        myBallStatus.locked = false;
     }
 }

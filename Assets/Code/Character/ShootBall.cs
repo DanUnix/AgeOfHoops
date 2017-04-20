@@ -15,6 +15,7 @@ public class ShootBall : MonoBehaviour {
 
     // Boolean value that status is based on the ball being shot
     public bool ballShot;
+    public bool locked;
 
     private float multiplier = 15;
 
@@ -28,6 +29,7 @@ public class ShootBall : MonoBehaviour {
         Physics.gravity *= multiplier;
 
         ballShot = false;
+        locked = false;
     }
 	
 	// Update is called once per frame
@@ -36,7 +38,7 @@ public class ShootBall : MonoBehaviour {
         // Spacebar to shoot the ball
         bool down = Input.GetKeyDown(KeyCode.Space);
         
-        if (down && ballShot == false)
+        if (down && ballShot == false && !locked)
         {
             // Create basketball object at character's position
             var ball = GameObject.Instantiate(basketball, this.transform.position + this.transform.up, Quaternion.identity) as GameObject;
@@ -58,11 +60,8 @@ public class ShootBall : MonoBehaviour {
             ball.GetComponent<Rigidbody>().isKinematic = false;
             ball.GetComponent<Rigidbody>().WakeUp();
             ballShot = true;
-<<<<<<< HEAD
-            
-=======
             Destroy(ball, 15f);
->>>>>>> 26f3452bd495308840915438c652da6f356bab97
+
         }
     }
     
