@@ -39,7 +39,7 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerScore >= 1)
+        if (playerScore >= 5)
         {
             winnerPos = winner.transform.position;
             winnerPos.y += 100;
