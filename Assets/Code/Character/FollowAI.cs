@@ -10,7 +10,7 @@ public class FollowAI : MonoBehaviour {
     private List<Vector3> cellPositions;
 
     private int currRound;
-    private int oldIndex = 0;
+    private int oldIndex;
     public Vector3 globalPosition;
     private Vector3 originalPosition;
 
@@ -19,6 +19,7 @@ public class FollowAI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        oldIndex = 0;
         cells = hexgrid.cells;
         cellPositions = new List<Vector3>();
         foreach (HexCell cell in cells)
@@ -71,6 +72,7 @@ public class FollowAI : MonoBehaviour {
 
     public void resetPosition()
     {
+        hexgrid.occupiedCells[oldIndex] = 0;
         transform.position = originalPosition;
     }
 }

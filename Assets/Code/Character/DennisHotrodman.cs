@@ -136,6 +136,7 @@ public class DennisHotrodman : MonoBehaviour {
 
     public void resetPosition()
     {
+        hexgrid.occupiedCells[oldIndex] = 0;
         transform.position = originalPosition;
     }
 }

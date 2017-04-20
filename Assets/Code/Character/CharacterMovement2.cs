@@ -14,8 +14,10 @@ public class CharacterMovement2 : MonoBehaviour {
     private List<Vector3> cellPositions;
     private Renderer renderer;
 
+    private int originalIndex;
     private Vector3 originalPosition;
     public Vector3 globalPosition;
+
     public bool stayedInSameSpot;
     public bool movedThisRound;
 
@@ -42,7 +44,9 @@ public class CharacterMovement2 : MonoBehaviour {
         stayedInSameSpot = false;
         movedThisRound = false;
         animator = GetComponent<Animator>();
+
         originalPosition = transform.position;
+        originalIndex = getIndex();
     }
 
     void OnMouseEnter()
@@ -138,9 +142,34 @@ public class CharacterMovement2 : MonoBehaviour {
 
     public void resetPosition()
     {
+        movedThisRound = false;
+        stayedInSameSpot = false;
+        hexgrid.occupiedCells[oldIndex] = 0;
         transform.position = originalPosition;
+        oldIndex = originalIndex;
     }
 
+
+    int getIndex()
+    {
+        Vector3 currentPosition = transform.position;
+
+        Vector3 closetCell = new Vector3(0, 0, 0);
+        float dist = float.MaxValue;
+        int index = 0;
+        for (int i = 0; i < cellPositions.Count; i++)
+        {
+            Vector3 v = cellPositions[i];
+
+            if (hexgrid.occupiedCells[i] == 1 && Vector3.Distance(v, currentPosition) < dist)
+            {
+                dist = Vector3.Distance(v, currentPosition);
+                closetCell = v;
+                index = i;
+            }
+        }
+        return index;
+    }
 
 
     bool validMove(int newindex)
