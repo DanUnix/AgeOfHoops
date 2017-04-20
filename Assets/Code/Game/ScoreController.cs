@@ -29,7 +29,7 @@ public class ScoreController : MonoBehaviour
             gameFlow.triggerVictory();
 
         // Print Score to UI
-        ScoreLabel.text = "Score\nYou vs Dennis Hotrodman\n" 
+        ScoreLabel.text = "Score\nYou vs Dennis Hotrodman\n"
             + playerScore + " : " + aiScore;
     }
 }

@@ -45,6 +45,7 @@ public class ShootBall : MonoBehaviour {
             // Ignore ball on character collision
             var ballCollider = this.GetComponentInChildren<Collider>();
             Physics.IgnoreCollision(ball.GetComponent<Collider>(), ballCollider);
+            ballCollider.contactOffset *= 10;
             
             // give the correct initial velocity so the ball arcs into the target
             Vector3 newVel = findInitialVelocity(ball.transform.position, targetPosition);
