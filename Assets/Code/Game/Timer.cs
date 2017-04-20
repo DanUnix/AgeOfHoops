@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour {
+public class Timer : MonoBehaviour
+{
 
     // Timer Label
     public Text timerLabel;
@@ -13,14 +14,16 @@ public class Timer : MonoBehaviour {
 
     // The time that will be displayed to the user
     private float time;
-    
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start()
+    {
         time = 30.0f;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         // Using deltaTime
         time -= Time.deltaTime;
@@ -34,7 +37,7 @@ public class Timer : MonoBehaviour {
         {
             rc.updateRoundLabel();
         }
-	}
+    }
 
     public void resetTimer()
     {
