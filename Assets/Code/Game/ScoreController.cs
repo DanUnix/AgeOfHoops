@@ -21,7 +21,7 @@ public class ScoreController : MonoBehaviour
         // Set initial game score to 0
         playerScore = 0;
         aiScore = 0;
-        winScore = 1;
+        winScore = 5;
     }
 
     // Update is called once per frame
