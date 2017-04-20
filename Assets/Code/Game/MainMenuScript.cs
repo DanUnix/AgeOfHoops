@@ -12,12 +12,12 @@ public class MainMenuScript : MonoBehaviour {
     public Button controlText;
     public Button exitText;
 
-    private bool isShowing;
+    
 
 	// Use this for initialization
 	void Start () {
 
-        isShowing = false;
+        
         quitMenu = quitMenu.GetComponent<Canvas>();
         quitMenu.enabled = false;
         startText = startText.GetComponent<Button>();
