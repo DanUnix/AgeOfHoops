@@ -14,6 +14,22 @@ public class HexMapCamera : MonoBehaviour {
     public float rotationAngle = 0;
 
     public HexGrid grid;
+    public ScoreController score;
+
+    //cutscene states
+    // 0 = open
+    // 1 = play
+    // 2 = win
+    private int state;
+    public GameObject winner;
+    public float speed = 1.0F;
+    private float startTime;
+    private float journeyLength;
+    private Vector3 look;
+    private Vector3 startLook;
+    private Vector3 winnerPos;
+    private bool setup;
+    private Vector3 camPos;
 
     void Awake()
     {
@@ -23,27 +39,75 @@ public class HexMapCamera : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        state = 0;
+        look = winner.transform.position;
+        look.x -= 100;
+        look.y += 120;
+        startLook = winner.transform.position;
+        startLook.x += 200;
+        startLook.y += 120;
+        startTime = Time.time;
+        camPos = Camera.main.transform.position;
+        journeyLength = Vector3.Distance(startLook, camPos);
+        Camera.main.transform.position = startLook;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        float zoomDelta = Input.GetAxis("Mouse ScrollWheel");
-        if (zoomDelta != 0f)
+        if(state == 0)
         {
-            AdjustZoom(zoomDelta);
+            winnerPos = winner.transform.position;
+            winnerPos.y += 100;
+            float distCovered = (Time.time - startTime) * speed;
+            float fracJourney = distCovered / journeyLength;
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, camPos, fracJourney);
+            Camera.main.transform.LookAt(winnerPos, Vector3.up);
+            if (Camera.main.transform.position.y > camPos.y - 10)
+            {
+                Camera.main.transform.position = camPos;
+                //Camera.main.transform.rotation.;
+                state++;
+            }
         }
 
-        float xDelta = Input.GetAxis("Horizontal");
-        float zDelta = Input.GetAxis("Vertical");
-        if (xDelta != 0f || zDelta != 0f)
+        else if (state == 1)
         {
-            AdjustPosition(xDelta, zDelta);
+            float zoomDelta = Input.GetAxis("Mouse ScrollWheel");
+            if (zoomDelta != 0f)
+            {
+                AdjustZoom(zoomDelta);
+            }
+
+            float xDelta = Input.GetAxis("Horizontal");
+            float zDelta = Input.GetAxis("Vertical");
+            if (xDelta != 0f || zDelta != 0f)
+            {
+                AdjustPosition(xDelta, zDelta);
+            }
+            float rotationDelta = Input.GetAxis("Rotation");
+            if (rotationDelta != 0f)
+            {
+                AdjustRotation(rotationDelta);
+            }
+
+            if(score.playerScore >= score.winScore)
+            {
+                state++;
+                journeyLength = Vector3.Distance(Camera.main.transform.position, look);
+            }
         }
-        float rotationDelta = Input.GetAxis("Rotation");
-        if (rotationDelta != 0f)
+        
+        else if(state == 2)
         {
-            AdjustRotation(rotationDelta);
+            winnerPos = winner.transform.position;
+            winnerPos.y += 100;
+            float distCovered = (Time.time - startTime) * speed;
+            float fracJourney = distCovered / journeyLength;
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, look, fracJourney);
+            Camera.main.transform.LookAt(winnerPos, Vector3.up);
+
+            if (Camera.main.transform.position.y < look.y + 10)
+                score.gameFlow.triggerVictory();
         }
     }
 
@@ -86,4 +150,5 @@ public class HexMapCamera : MonoBehaviour {
         position += direction * distance;
         transform.localPosition = position;
     }
+    
 }
