@@ -19,43 +19,38 @@ Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build2017040
 Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.037 seconds
+- Completed reload, in  0.038 seconds
 Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\DMpul\Desktop\Age\AgeOfHoops\AgeOfHoops_Build20170406_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 59Hz; virtual: 4320x1350 at 0,0
+desktop: 1920x1080 59Hz; virtual: 3456x1080 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 4.313308 ms
+UnloadTime: 4.128129 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: b0c -> priority: 1 
+  Thread -> id: 3fc -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.983862 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 294.
+Total: 0.537131 ms (FindLiveObjects: 0.051318 ms CreateObjectMapping: 0.042337 ms MarkObjects: 0.420382 ms  DeleteObjects: 0.009836 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.378472 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3536.
+Total: 3.156075 ms (FindLiveObjects: 0.219385 ms CreateObjectMapping: 0.030790 ms MarkObjects: 0.534565 ms  DeleteObjects: 2.370477 ms)
+
 NullReferenceException: Object reference not set to an instance of an object
-  at MainMenuScript.Start () [0x00000] in <filename unknown>:0 
+  at InstructMenu.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3d30 -> priority: 1 
-  Thread -> id: 3cb0 -> priority: 1 
-NullReferenceException: Object reference not set to an instance of an object
-  at MainMenuScript.ExitPress () [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
-  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
-  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
-  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
-  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
-UnityEngine.EventSystems.StandaloneInputModule:Process()
-UnityEngine.EventSystems.EventSystem:Update()
- 
-(Filename:  Line: -1)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.951657 ms
+
+Unloading 60 unused Assets to reduce memory usage. Loaded Objects now: 291.
+Total: 4.752930 ms (FindLiveObjects: 0.030363 ms CreateObjectMapping: 0.017961 ms MarkObjects: 0.170633 ms  DeleteObjects: 4.533544 ms)
 
