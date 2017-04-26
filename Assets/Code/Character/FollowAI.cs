@@ -9,7 +9,7 @@ public class FollowAI : MonoBehaviour {
     private HexCell[] cells;
     private List<Vector3> cellPositions;
 
-    private int currRound;
+    private int originalIndex;
     private int oldIndex;
     public Vector3 globalPosition;
     private Vector3 originalPosition;
@@ -19,7 +19,8 @@ public class FollowAI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        oldIndex = 17;
+        oldIndex = 0;
+        originalIndex = 17;
         cells = hexgrid.cells;
         cellPositions = new List<Vector3>();
         foreach (HexCell cell in cells)
@@ -28,21 +29,11 @@ public class FollowAI : MonoBehaviour {
                 cellPositions.Add(cell.transform.position);
         }
 
-        currRound = RC.roundCounter;
-        originalPosition = transform.position;
+        originalPosition = cellPositions[originalIndex];
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-		if(currRound != RC.roundCounter)
-        {
-            MoveChar();
-            currRound = RC.roundCounter;
-        }
-	}
 
-    void MoveChar()
+    //called by RoundCounter
+    public void MoveChar()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 100f);
 
@@ -74,5 +65,6 @@ public class FollowAI : MonoBehaviour {
     {
         hexgrid.occupiedCells[oldIndex] = 0;
         transform.position = originalPosition;
+        oldIndex = originalIndex;
     }
 }

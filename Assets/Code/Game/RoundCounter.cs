@@ -40,6 +40,7 @@ public class RoundCounter : MonoBehaviour {
      
         if (allCharactersMoved())
         {
+            Aomine.MoveChar();
             updateRoundLabel();
 
             // When round is incremented make the ball shootable again.
