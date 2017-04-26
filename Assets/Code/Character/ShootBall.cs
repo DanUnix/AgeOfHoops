@@ -45,6 +45,45 @@ public class ShootBall : MonoBehaviour {
         
         if (down && ballShot == false && !locked)
         {
+            targetPosition = hoopPosition.transform.position;
+
+            float xDiff = transform.position.x - targetPosition.x;
+            float zDiff = Mathf.Abs(transform.position.z - targetPosition.z);
+            float rad = Mathf.Sqrt(Mathf.Pow(xDiff, 2) + Mathf.Pow(zDiff, 2));
+
+            if (rad > 540) //3/4 to full court shot
+            {
+                float offset = Random.value;
+                if (offset > 0.1) //miss
+                {
+                    Vector3 offsetVector = 300 * Random.insideUnitSphere;
+                    updateTarget(offsetVector);
+                }
+            }
+            else if (rad > 360) //half to 3/4 court shot
+            {
+                float offset = Random.value;
+                if (offset > 0.3) //miss
+                {
+                    Vector3 offsetVector = 200 * Random.insideUnitSphere;
+                    updateTarget(offsetVector);
+                }
+            }
+            else if (rad > 180 && rad < 360) //quarter to half court
+            {
+                float offset = Random.value;
+                if (offset > 0.5) //miss
+                {
+                    Vector3 offsetVector = 100*Random.insideUnitSphere;
+                    updateTarget(offsetVector);
+                }
+            }
+            else
+            {
+                targetPosition.y += 50; //arc it up if close
+            }
+
+
             // Create basketball object at character's position
             var ball = GameObject.Instantiate(basketball, this.transform.position + this.transform.up, Quaternion.identity) as GameObject;
             Vector3 temp = new Vector3(0,50,0);
@@ -55,7 +94,6 @@ public class ShootBall : MonoBehaviour {
             
             // give the correct initial velocity so the ball arcs into the target
             Vector3 newVel = findInitialVelocity(ball.transform.position, targetPosition);
-            //Debug.Log("newVel: (" + newVel.x.ToString(".00") +", " + newVel.y.ToString(".00") +", "+ newVel.z.ToString(".00") +")");
 
             // set the new velocity on the rigid body
 
@@ -70,6 +108,13 @@ public class ShootBall : MonoBehaviour {
         }
     }
     
+
+    private void updateTarget(Vector3 offsetVector)
+    {
+        targetPosition.x += offsetVector.x;
+        targetPosition.y += offsetVector.y;
+        targetPosition.z += offsetVector.z;
+    }
 
     private Vector3 findInitialVelocity(Vector3 startPosition, Vector3 finalPosition, float maxHeightOffset = 0.6f, float rangeOffSet = 0.11f)
     {
