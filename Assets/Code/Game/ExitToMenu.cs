@@ -45,8 +45,6 @@ public class ExitToMenu : MonoBehaviour {
 
     public void toMainMenu()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-        
+        SceneManager.LoadScene(0, LoadSceneMode.Single);        
     }
 }
