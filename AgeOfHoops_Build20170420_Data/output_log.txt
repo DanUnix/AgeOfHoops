@@ -1,49 +1,69 @@
 Initialize engine version: 5.5.1f1 (88d00a7498cd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
-    Vendor:   Intel
-    VRAM:     1133 MB
-    Driver:   20.19.15.4474
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 860M (ID=0x1392)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+    Driver:   20.19.15.4531
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\jae09\Desktop\CS426\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\System.dll (this message is harmless)
-desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.039 seconds
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\AgeOfHoops_Build20170420_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3520x1080 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.127383 ms
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2898 -> priority: 1 
+UnloadTime: 8.426030 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1cc0 -> priority: 1 
+  Thread -> id: 740 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.294767 ms
+UnloadTime: 4.720424 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
-Total: 1.716101 ms (FindLiveObjects: 0.028307 ms CreateObjectMapping: 0.015999 ms MarkObjects: 1.018666 ms  DeleteObjects: 0.007384 ms)
+Total: 0.222379 ms (FindLiveObjects: 0.022237 ms CreateObjectMapping: 0.017106 ms MarkObjects: 0.174482 ms  DeleteObjects: 0.004704 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.703999 ms
+UnloadTime: 0.523873 ms
 
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3564.
-Total: 5.664818 ms (FindLiveObjects: 0.180923 ms CreateObjectMapping: 0.027487 ms MarkObjects: 0.985845 ms  DeleteObjects: 4.469741 ms)
+Total: 3.039323 ms (FindLiveObjects: 0.124874 ms CreateObjectMapping: 0.028652 ms MarkObjects: 0.468279 ms  DeleteObjects: 2.417517 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.203114 ms
+
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 347.
+Total: 9.159026 ms (FindLiveObjects: 0.069279 ms CreateObjectMapping: 0.037633 ms MarkObjects: 0.444758 ms  DeleteObjects: 8.606071 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.803896 ms
+UnloadTime: 0.438771 ms
 
-Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 292.
-Total: 9.636508 ms (FindLiveObjects: 0.050051 ms CreateObjectMapping: 0.016820 ms MarkObjects: 0.183384 ms  DeleteObjects: 9.385842 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 300.
+Total: 0.548677 ms (FindLiveObjects: 0.059443 ms CreateObjectMapping: 0.050035 ms MarkObjects: 0.428507 ms  DeleteObjects: 0.009408 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.363504 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3564.
+Total: 3.326278 ms (FindLiveObjects: 0.219385 ms CreateObjectMapping: 0.029507 ms MarkObjects: 0.520025 ms  DeleteObjects: 2.556504 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.734686 ms
+
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 347.
+Total: 8.930660 ms (FindLiveObjects: 0.074411 ms CreateObjectMapping: 0.038916 ms MarkObjects: 0.468279 ms  DeleteObjects: 8.347770 ms)
 

@@ -1,0 +1,51 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 860M (ID=0x1392)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+    Driver:   20.19.15.4531
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.036 seconds
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DMpul\Documents\AgeOfHoops\test_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 3456x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.240043 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3300 -> priority: 1 
+  Thread -> id: 3304 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.469396 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.250176 ms (FindLiveObjects: 0.026942 ms CreateObjectMapping: 0.017961 ms MarkObjects: 0.194154 ms  DeleteObjects: 0.004276 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.377617 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3564.
+Total: 4.811090 ms (FindLiveObjects: 0.158659 ms CreateObjectMapping: 0.029935 ms MarkObjects: 0.531144 ms  DeleteObjects: 4.090496 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.082667 ms
+
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 347.
+Total: 5.424344 ms (FindLiveObjects: 0.059016 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.274552 ms  DeleteObjects: 5.068110 ms)
+
