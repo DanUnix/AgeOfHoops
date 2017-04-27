@@ -19,21 +19,26 @@ public class ShootBall : MonoBehaviour {
 
     private float multiplier = 15;
 
-    
-    
+    private static readonly Vector3 initialGravity = Physics.gravity;
     // When ball enters the hoop score counter increases
 
     // Use this for initialization
     void Start () {
         targetPosition = hoopPosition.transform.position;
-        Physics.gravity *= multiplier;
+
+        if (Physics.gravity == initialGravity)
+        {
+            Physics.gravity *= multiplier;
+        }
 
         ballShot = false;
         locked = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    
+
+    // Update is called once per frame
+    void Update () {
 
         // Spacebar to shoot the ball
         bool down = Input.GetKeyDown(KeyCode.Space);
