@@ -12,8 +12,6 @@ public class MainMenuScript : MonoBehaviour {
     public Button controlText;
     public Button exitText;
 
-    
-
 	// Use this for initialization
 	void Start () {
 
@@ -49,7 +47,15 @@ public class MainMenuScript : MonoBehaviour {
 
     public void StartLevel()
     {
+        PlayerPrefs.SetInt("loadStatus", 0);
+        PlayerPrefs.SetInt("myPoint", 0);
+        PlayerPrefs.SetInt("enemyPoint", 0);
+        SceneManager.LoadScene(1);
+    }
 
+    public void LoadLevel()
+    {
+        PlayerPrefs.SetInt("loadStatus", 1);
         SceneManager.LoadScene(1);
     }
 

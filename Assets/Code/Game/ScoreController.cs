@@ -18,9 +18,18 @@ public class ScoreController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Set initial game score to 0
-        playerScore = 0;
-        aiScore = 0;
+        if (PlayerPrefs.GetInt("loadStatus") == 1)
+        {
+            playerScore = PlayerPrefs.GetInt("myPoint");
+            aiScore = PlayerPrefs.GetInt("enemyPoint");
+        }
+        else
+        {
+            // Set initial game score to 0
+            playerScore = 0;
+            aiScore = 0;
+        }
+        
         winScore = 5;
     }
 
@@ -30,5 +39,7 @@ public class ScoreController : MonoBehaviour
         // Print Score to UI
         ScoreLabel.text = "Score\nYou vs Dennis Hotrodman\n"
             + playerScore + " : " + aiScore;
+        PlayerPrefs.SetInt("myPoint", playerScore);
+        PlayerPrefs.SetInt("enemyPoint", aiScore);
     }
 }

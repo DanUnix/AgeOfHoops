@@ -1,0 +1,50 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Vendor:   NVIDIA
+    VRAM:     2017 MB
+    Driver:   21.21.13.7653
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.026 seconds
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Jae\Desktop\AgeOfHoops\AgeOfHoops_Build20170426_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 5760x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.833822 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 6804 -> priority: 1 
+  Thread -> id: 2754 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.280873 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.232300 ms (FindLiveObjects: 0.029549 ms CreateObjectMapping: 0.010825 ms MarkObjects: 0.185196 ms  DeleteObjects: 0.004388 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.315389 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3412.
+Total: 3.715046 ms (FindLiveObjects: 0.203043 ms CreateObjectMapping: 0.016091 ms MarkObjects: 0.306905 ms  DeleteObjects: 3.188129 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.191927 ms
+
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 292.
+Total: 4.962270 ms (FindLiveObjects: 0.026038 ms CreateObjectMapping: 0.011410 ms MarkObjects: 0.148917 ms  DeleteObjects: 4.775025 ms)
+

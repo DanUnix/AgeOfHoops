@@ -33,6 +33,11 @@ public class IntroSceneStory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (PlayerPrefs.GetInt("loadStatus") == 1)
+        {
+            SceneManager.LoadScene("AgeOfHoops", LoadSceneMode.Single);
+        }
+
         if (Input.anyKeyDown && swapText)
         {
             switch (counter)
