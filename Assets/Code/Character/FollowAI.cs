@@ -19,7 +19,7 @@ public class FollowAI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        oldIndex = 0;
+        oldIndex = 17;
         cells = hexgrid.cells;
         cellPositions = new List<Vector3>();
         foreach (HexCell cell in cells)
